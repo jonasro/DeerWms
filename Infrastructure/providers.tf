@@ -18,8 +18,8 @@ terraform {
 
   # Backend
   backend "azurerm" {
-    resource_group_name  = azurerm_resource_group.wms_rg.name
-    storage_account_name = "terraformgithubactions"
+    resource_group_name  = "rg-terraform-gh-actions"
+    storage_account_name = "deerwmsterraformstate"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
     use_oidc             = true
