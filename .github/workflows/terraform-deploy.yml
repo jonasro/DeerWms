@@ -5,6 +5,10 @@ on:
     branches:
       - 'master'
 
+defaults:
+  run:
+    working-directory: ./Infrastructure
+
 permissions:
   id-token: write 
   contents: read
@@ -22,8 +26,6 @@ jobs:
       uses: actions/checkout@v4
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
-      with:
-        tf_actions_working_dir: 'Infrastructure'
     - name: Terraform init
       id: init
       run: terraform init
