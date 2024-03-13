@@ -15,8 +15,18 @@ terraform {
   }
 
   required_version = ">= 1.7.3"
+
+  # Backend
+  backend "azurerm" {
+    resource_group_name  = azurerm_resource_group.wms_rg.name
+    storage_account_name = "terraformgithubactions"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+    use_oidc             = true
+  }
 }
 
 provider "azurerm" {
   features {}
+  use_oidc = true
 }
