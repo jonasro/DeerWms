@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeerWms.Api", "Api\DeerWms.Api\DeerWms.Api.csproj", "{1080B08F-2AB9-4382-8C0D-E27E363023DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1080B08F-2AB9-4382-8C0D-E27E363023DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1080B08F-2AB9-4382-8C0D-E27E363023DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1080B08F-2AB9-4382-8C0D-E27E363023DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1080B08F-2AB9-4382-8C0D-E27E363023DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBFF5B0A-1CD3-4539-8FAE-286C10A1F1AE}
+	EndGlobalSection
+EndGlobal

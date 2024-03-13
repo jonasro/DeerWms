@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deer-wms
+spec:
+  selector:
+    matchLabels:
+      app: deer-wms
+  template:
+    metadata:
+      labels:
+        app: deer-wms
+    spec:
+      containers:
+      - name: deerwms
+        image: deer-wms
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: PORT
+            value: "8080"
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "128m"
+        ports:
+        - containerPort: 8080
+          name: http
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: deer-wms
+spec:
+  selector:
+    app: deer-wms
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 8080
